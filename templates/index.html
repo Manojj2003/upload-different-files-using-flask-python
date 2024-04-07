@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 10px;
+        }
+
+        input[type="file"] {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Upload Files</h2>
+        <form action="/" method="post" enctype="multipart/form-data">
+            <div>
+                <label for="upload_pdf">Browse PDF File:</label>
+                <input type="file" name="upload_pdf" id="upload_pdf">
+            </div>
+            <div>
+                <label for="upload_excel">Browse Excel File:</label>
+                <input type="file" name="upload_excel" id="upload_excel">
+            </div>
+            <div>
+                <label for="upload_videos">Browse Video File:</label>
+                <input type="file" name="upload_videos" id="upload_videos">
+            </div>
+            <div>
+                <input type="submit" name="upload" value="Upload">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
